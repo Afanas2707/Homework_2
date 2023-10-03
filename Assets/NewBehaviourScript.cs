@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public int a = 30;
-    public int b = 20;
-    public int c;
+    public GameObject Cube;
     // Start is called before the first frame update
     void Start()
     {
-        c = a + b;
-        Debug.Log(c);
+        //Cube.SetActive(true);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void onClick()
+    {
+        if (Cube.activeInHierarchy == true)
+            Cube.SetActive(false);
+        else
+            Cube.SetActive(true);
     }
 }
